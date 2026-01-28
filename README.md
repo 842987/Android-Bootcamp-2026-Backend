@@ -147,5 +147,5 @@
 
 ## Схема базы данных
 
-![Uploading image.png…]()
+![Схема базы данных](database_schema.png)
 
