@@ -18,7 +18,7 @@
                 <constraints nullable="false"/>
             </column>
 
-            <column name="avatar" type="VARCHAR(150)">
+            <column name="avatar_url" type="VARCHAR(150)">
                 <constraints nullable="false" unique="true"/>
             </column>
         </createTable>

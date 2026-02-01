@@ -16,9 +16,10 @@
             <column name="creator_id" type="BIGINT">
                 <constraints nullable="false" foreignKeyName="fk_meetings_users"
                              referencedTableName="users"
-                             referencedColumnNames="id"/>
+                             referencedColumnNames="id"
+                             deleteCascade="true"/>
             </column>
-            <column name="timestamp" type="TIMESTAMP">
+            <column name="date" type="TIMESTAMP">
                 <constraints nullable="false"/>
             </column>
         </createTable>
