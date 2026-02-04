@@ -10,6 +10,7 @@ public class UsersMapper {
         UsersDTO dto = new UsersDTO();
         dto.setId(user.getId());
         dto.setName(user.getName());
+        dto.setUsername(user.getUsername());
         dto.setAvatarUrl(user.getAvatarUrl());
         return dto;
     }

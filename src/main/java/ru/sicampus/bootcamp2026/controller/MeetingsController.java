@@ -16,7 +16,7 @@ public class MeetingsController {
     private final UsersService usersService;
 
     @GetMapping("/{id}")
-    public ResponseEntity<MeetingsDTO> getMeeting(@RequestParam long id) {
+    public ResponseEntity<MeetingsDTO> getMeeting(@PathVariable long id) {
         return ResponseEntity.ok(meetingsService.getMeetingById(id));
     }
 
@@ -26,12 +26,12 @@ public class MeetingsController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<MeetingsDTO> updateMeeting(@RequestParam long id, @RequestBody MeetingsDTO dto) {
+    public ResponseEntity<MeetingsDTO> updateMeeting(@PathVariable long id, @RequestBody MeetingsDTO dto) {
         return ResponseEntity.ok(meetingsService.updateUser(id, dto));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteMeeting(@RequestParam long id) {
+    public ResponseEntity<Void> deleteMeeting(@PathVariable long id) {
         meetingsService.deleteUser(id);
         return ResponseEntity.noContent().build();
     }
