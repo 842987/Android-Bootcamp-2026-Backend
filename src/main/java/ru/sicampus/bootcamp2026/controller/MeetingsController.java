@@ -40,4 +40,9 @@ public class MeetingsController {
     public ResponseEntity<Page<MeetingsDTO>> getAllMeetingsPaginated(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
         return ResponseEntity.ok(meetingsService.getAllPaginated(page, size));
     }
+
+    @GetMapping("/paginated/{username}")
+    public ResponseEntity<Page<MeetingsDTO>> getAllUserInvitedMeetingsPaginated(@PathVariable String username, @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
+        return ResponseEntity.ok(meetingsService.getAllUserInvitedPaginated(username,page, size));
+    }
 }
